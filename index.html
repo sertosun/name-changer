@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NameChanger</title>
+
+    <style></style>
+  </head>
+  <body>
+    <p id="name">Name</p>
+    <p id="alter">Alter</p>
+    <input type="number" id="person" />
+    <button id="personBtn" onclick="getPerson()">Get Person</button>
+
+    <script>
+      const personName = document.getElementById("name");
+      const personAlter = document.getElementById("alter");
+      var personInput = document.getElementById("person")
+
+      const personsArray = [
+        {
+          username: "Mehmet",
+          alter: 18,
+        },
+        {
+          username: "Eman",
+          alter: 18,
+        },
+        {
+          username: "Sadeddin",
+          alter: 18,
+        },
+        {
+          username: "Ertugrul",
+          alter: 18,
+        },
+        {
+          username: "Hasan",
+          alter: 18,
+        },
+        {
+          username: "Basri",
+          alter: 18,
+        },
+      ];
+
+      function getPerson() {
+        const { username , alter } = personsArray[personInput.value];
+
+        personName.innerHTML = username;
+        personAlter.innerHTML = alter;
+      }
+    </script>
+  </body>
+</html>
